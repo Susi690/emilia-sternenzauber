@@ -1,4 +1,4 @@
-let stars = Number(localStorage.getItem("stars")) || 0;
+let stars = 35;
 
 const startPage = document.getElementById("startPage");
 const taskPage = document.getElementById("taskPage");
@@ -53,9 +53,11 @@ function updateStars() {
     progressBarStart.style.width = percent + "%";
     progressBarTasks.style.width = percent + "%";
 
-    if (stars >= 35) {
-        alert("🎉 Herzlichen Glückwunsch Emilia! 🌈\n\nDu hast alle 35 Sterne gesammelt! 💖\nJetzt wartet eure Belohnung! 🥰");
-    }
+if (stars >= 35) {
+    startPage.classList.remove("active");
+    taskPage.classList.remove("active");
+    rewardPage.classList.add("active");
+}
 }
 
 updateStars(); 
