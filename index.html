@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emilias Sternenzauber</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+<section id="startPage" class="page active">
+<h1><div class="magic-header">
+<div class="rainbow">🌈</div>
+<div class="sparkles">✨ ⭐ ✨</div>
+<h1>Emilias Sternenzauber</h1>
+<p class="team-text">Mama, Emilia & Polly sind ein Team 💕</p>
+</div> </h1>
+<p class="hello">Hallo Emilia ❤️</p>
+
+<div class="stars-number">⭐ <span id="starsCountStart">0</span> / 35 Sterne</div>
+<div class="progress"><div id="progressBarStart"></div></div>
+
+<p>Heute sammeln wir gemeinsam Sterne.</p>
+<button id="startButton">🌸 Heute starten</button>
+</section>
+
+<section id="taskPage" class="page">
+<h1>⭐ Heute</h1>
+
+<div class="stars-number">⭐ <span id="starsCountTasks">0</span> / 35 Sterne</div>
+<div class="progress"><div id="progressBarTasks"></div></div>
+
+<div class="tasks">
+<label class="task"><input type="checkbox" class="taskCheck"> 🎒 Schulsachen weggeräumt</label>
+<label class="task"><input type="checkbox" class="taskCheck"> 🧺 Mama geholfen</label>
+<label class="task"><input type="checkbox" class="taskCheck"> 🐶 Polly versorgt</label>
+<label class="task"><input type="checkbox" class="taskCheck"> 🌸 Gut miteinander umgegangen</label>
+<label class="task"><input type="checkbox" class="taskCheck"> 🌙 Abendroutine geschafft</label>
+<label class="task bonus"><input type="checkbox" class="taskCheck"> 💕 10 Minuten Kuschel-, Spiel- oder Quatschzeit</label>
+</div>
+
+<button id="backButton">⬅ Zurück</button>
+</section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html> 

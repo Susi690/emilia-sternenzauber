@@ -1,0 +1,268 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        180deg,
+        #ffd6f6,
+        #f5d0ff,
+        #d9c8ff
+    );
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+
+    background:white;
+
+    width:420px;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+h1{
+
+    color:#ff4fa3;
+
+    font-size:36px;
+
+}
+
+p{
+
+    font-size:20px;
+
+    color:#666;
+
+}
+
+button{
+
+    background:#ff5bb0;
+
+    color:white;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:18px 35px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}.stars-box {
+margin: 20px 0;
+}
+
+.stars-number {
+font-size: 24px;
+font-weight: bold;
+color: #9b4dca;
+margin-bottom: 10px;
+}
+
+.progress {
+width: 100%;
+height: 18px;
+background: #f1d5ff;
+border-radius: 20px;
+overflow: hidden;
+}
+
+#progressBar {
+width: 0%;
+height: 100%;
+background: linear-gradient(90deg, #ff5bb0, #b76cff, #ffd85b);
+border-radius: 20px;
+transition: width 0.4s ease;
+} .tasks{
+margin:25px 0;
+text-align:left;
+}
+
+.task{
+display:flex;
+align-items:center;
+gap:12px;
+padding:10px;
+margin-bottom:10px;
+background:#fff5fb;
+border-radius:15px;
+}
+
+.task span{
+font-size:18px;
+}
+
+.task input{
+transform:scale(1.5);
+cursor:pointer;
+} .tasks {
+margin-top: 25px;
+}
+
+.task {
+display: flex;
+align-items: center;
+gap: 12px;
+background: #fff1fb;
+border: 2px solid #ffd1ec;
+border-radius: 18px;
+padding: 12px 16px;
+margin-bottom: 10px;
+font-size: 18px;
+color: #5c3b66;
+}
+
+.task input {
+width: 22px;
+height: 22px;
+accent-color: #ff5bb0;
+} .page {
+display: none;
+}
+
+.page.active {
+display: block;
+}
+
+.app {
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.hello {
+font-size: 26px;
+margin-bottom: 20px;
+} .magic-header {
+text-align: center;
+margin-bottom: 25px;
+animation: float 3s ease-in-out infinite;
+}
+
+.rainbow {
+font-size: 55px;
+margin-bottom: 5px;
+}
+
+.sparkles {
+font-size: 24px;
+letter-spacing: 8px;
+animation: sparkle 1.5s infinite alternate;
+}
+
+.magic-header h1 {
+color: #ff4fa3;
+font-size: 42px;
+margin: 10px 0;
+text-shadow: 2px 2px 0 #ffd6f6;
+}
+
+.team-text {
+font-size: 18px;
+color: #8a4fbf;
+font-weight: bold;
+}
+
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-8px); }
+100% { transform: translateY(0); }
+}
+
+@keyframes sparkle {
+from { opacity: 0.5; transform: scale(0.95); }
+to { opacity: 1; transform: scale(1.08); }
+} .page {
+display: none;
+animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+display: block;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+} button {
+transition: 0.3s;
+}
+
+button:hover {
+transform: scale(1.08);
+box-shadow: 0 10px 25px rgba(255,80,180,0.4);
+} .task {
+transition: 0.3s;
+}
+
+.task:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 18px rgba(255,120,190,.25);
+} .task.done {
+background: #ffd8ef;
+border-color: #ff4fa3;
+transform: scale(1.02);
+transition: .3s;
+}
+
+.task.done::after{
+content:"⭐";
+float:right;
+font-size:24px;
+} .tasks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.task {
+    min-height: 70px;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: flex-start;
+}
+
+.task input {
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.task.bonus {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #ffe1f3, #f3dcff);
+    border: 2px solid #ff8ccc;
+}
+
