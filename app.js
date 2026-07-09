@@ -52,7 +52,7 @@ function updateStars() {
     progressBarStart.style.width = percent + "%";
     progressBarTasks.style.width = percent + "%";
 
- if (stars >= 35) {
+ if (stars >= 6) {
     taskPage.classList.remove("active");
     rewardPage.classList.add("active");
 }
