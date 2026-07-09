@@ -47,7 +47,7 @@ function updateStars() {
     starsCountStart.textContent = stars;
     starsCountTasks.textContent = stars;
 
-    const percent = (stars / 35) * 100;
+    const percent = (stars / 6) * 100;
     progressBarStart.style.width = percent + "%";
     progressBarTasks.style.width = percent + "%";
 
