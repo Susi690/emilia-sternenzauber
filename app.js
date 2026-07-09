@@ -2,7 +2,8 @@ let stars = Number(localStorage.getItem("stars")) || 0;
 
 const startPage = document.getElementById("startPage");
 const taskPage = document.getElementById("taskPage");
-
+const rewardPage = document.getElementById("rewardPage");
+const restartButton = document.getElementById("restartButton");
 const startButton = document.getElementById("startButton");
 const backButton = document.getElementById("backButton");
 
@@ -51,9 +52,26 @@ function updateStars() {
     progressBarStart.style.width = percent + "%";
     progressBarTasks.style.width = percent + "%";
 
-    if (stars >= 35) {
-        alert("🎉 Herzlichen Glückwunsch Emilia! 🌈\n\nDu hast alle 35 Sterne gesammelt! 💖\nJetzt wartet eure Belohnung! 🥰");
-    }
+if (stars >= 35) {
+    taskPage.classList.remove("active");
+    rewardPage.classList.add("active");
 }
+}
+restartButton.addEventListener("click", function () {
+
+    stars = 0;
+    localStorage.setItem("stars", 0);
+
+    taskChecks.forEach((check, index) => {
+        check.checked = false;
+        check.parentElement.classList.remove("done");
+        localStorage.setItem("task-" + index, false);
+    });
+
+    rewardPage.classList.remove("active");
+    startPage.classList.add("active");
+
+    updateStars();
+});
 
 updateStars(); 
