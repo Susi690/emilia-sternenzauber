@@ -273,4 +273,20 @@ font-size:24px;
     pointer-events: none;
     z-index: 9999;
 }
+.family-image {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 20px auto 25px auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(255, 79, 163, 0.25);
+}
 
+@media (max-width: 600px) {
+    .family-image {
+        max-width: 280px;
+        margin: 15px auto 20px auto;
+        border-radius: 20px;
+    }
+}
