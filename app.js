@@ -104,6 +104,13 @@ finishWeekButton.addEventListener("click", function () {
 });
 // Neue Woche starten
 restartButton.addEventListener("click", function () {
+    const wirklichNeuStarten = confirm(
+        "Möchtest du wirklich eine neue Woche starten? ⭐\n\nAlle gesammelten Sterne werden auf 0 zurückgesetzt."
+    );
+
+    if (!wirklichNeuStarten) {
+        return;
+    }
     stars = 0;
     localStorage.setItem("stars", 0);
     localStorage.setItem("savedDay", today);
