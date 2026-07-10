@@ -8,6 +8,10 @@ const startButton = document.getElementById("startButton");
 const backButton = document.getElementById("backButton");
 const restartButton = document.getElementById("restartButton");
 
+const finishWeekButton = document.getElementById("finishWeekButton");
+const finalStars = document.getElementById("finalStars");
+const rewardMessage = document.getElementById("rewardMessage");
+
 const starsCountStart = document.getElementById("starsCountStart");
 const starsCountTasks = document.getElementById("starsCountTasks");
 
@@ -72,7 +76,32 @@ taskChecks.forEach((check, index) => {
         updateStars();
     });
 });
+// Woche abschließen
+finishWeekButton.addEventListener("click", function () {
+    finalStars.textContent = stars;
 
+    if (stars < 20) {
+        rewardMessage.textContent =
+            "Diese Woche wurde noch keine Belohnungsstufe erreicht. Nächste Woche klappt es bestimmt! 💕";
+    } else if (stars <= 24) {
+        rewardMessage.textContent =
+            "🍦 Deine Belohnung: Eis essen oder ein Brettspiel aussuchen.";
+    } else if (stars <= 29) {
+        rewardMessage.textContent =
+            "🍿 Deine Belohnung: Kinoabend zu Hause oder Lieblingsessen.";
+    } else if (stars <= 34) {
+        rewardMessage.textContent =
+            "🏊 Deine Belohnung: Schwimmbad, Bowling oder eine Kleinigkeit bis 5 €.";
+    } else {
+        rewardMessage.textContent =
+            "🌈 Deine Belohnung: Wunsch-Unternehmung oder ein großes Extra bis 10 €.";
+        startConfetti();
+    }
+
+    startPage.classList.remove("active");
+    taskPage.classList.remove("active");
+    rewardPage.classList.add("active");
+});
 // Neue Woche starten
 restartButton.addEventListener("click", function () {
     stars = 0;
@@ -97,17 +126,11 @@ function updateStars() {
     starsCountStart.textContent = stars;
     starsCountTasks.textContent = stars;
 
-    const percent = Math.min((stars / 35) * 100, 100);
+    const percent = Math.min((stars / 40) * 100, 100);
 
     progressBarStart.style.width = percent + "%";
     progressBarTasks.style.width = percent + "%";
 
-if (stars >= 35) {
-    startPage.classList.remove("active");
-    taskPage.classList.remove("active");
-    rewardPage.classList.add("active");
-    startConfetti();
-    }
 }
 function startConfetti() {
     const canvas = document.getElementById("confettiCanvas");
