@@ -78,6 +78,13 @@ taskChecks.forEach((check, index) => {
 });
 // Woche abschließen
 finishWeekButton.addEventListener("click", function () {
+    const wirklichAbschliessen = confirm(
+        "Möchtest du die Woche wirklich abschließen? ⭐\n\nDanach siehst du deine Wochenbelohnung. Bist du sicher?"
+    );
+
+    if (!wirklichAbschliessen) {
+        return;
+    }
     finalStars.textContent = stars;
 
     if (stars < 20) {
