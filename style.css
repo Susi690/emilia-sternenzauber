@@ -471,3 +471,43 @@ font-size:24px;
         max-width: 430px !important;
     }
 }
+/* Abschlussseite zuverlässig mittig ausrichten */
+#rewardPage.active {
+    position: fixed !important;
+    inset: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 40px 16px !important;
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    overflow-y: auto !important;
+    text-align: center !important;
+}
+
+#rewardPage.active > h1,
+#rewardPage.active .rewardBox {
+    width: 100% !important;
+    max-width: 680px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 600px) {
+    #rewardPage.active {
+        padding: 70px 16px 40px !important;
+    }
+
+    #rewardPage.active > h1,
+    #rewardPage.active .rewardBox {
+        max-width: 430px !important;
+    }
+}
