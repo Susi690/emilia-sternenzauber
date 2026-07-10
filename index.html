@@ -43,48 +43,52 @@
 <label class="task"><input type="checkbox" class="taskCheck"> 🗣️ Mama muss nicht alles mehrfach wiederholen</label>
 <label class="task"><input type="checkbox" class="taskCheck"> 💗 Ich gehe gut mit meinen Freunden um und lüge sie nicht an</label>
 </div>
-
+    
+<button id="finishWeekButton">⭐ Woche abschließen</button>
 <button id="backButton">⬅ Zurück</button>
+    
 </section>
 
 </div>
 <section id="rewardPage" class="page">
-    <h1>🎉 Super gemacht! 🎉</h1>
+    <h1>🎉 Deine Sternenwoche 🎉</h1>
 
     <div class="rewardBox">
-        <h2>35 von 35 Sternen ⭐</h2>
+        <h2><span id="finalStars">0</span> von 40 möglichen Sternen ⭐</h2>
 
         <p>
             Emilia ❤️<br><br>
-            Du hast alle Sterne gesammelt!
+            Du hast diese Woche toll mitgemacht!
         </p>
 
-        <p>
-            Jetzt ist Zeit für eure Wochenbelohnung! 🎁
+        <p id="rewardMessage">
+            Hier erscheint deine Wochenbelohnung. 🎁
         </p>
-<div class="reward-levels">
-    <h3>🎁 Deine Wochenbelohnung</h3>
 
-    <div class="reward-level">
-        <strong>⭐ 20–24 Sterne</strong>
-        <span>🍦 Eis essen oder ein Brettspiel aussuchen</span>
-    </div>
+        <div class="reward-levels">
+            <h3>🎁 Deine Wochenbelohnungen</h3>
 
-    <div class="reward-level">
-        <strong>⭐ 25–29 Sterne</strong>
-        <span>🍿 Kinoabend mit Popcorn oder Lieblingsessen wünschen</span>
-    </div>
+            <div class="reward-level">
+                <strong>⭐ 20–24 Sterne</strong>
+                <span>🍦 Eis essen oder ein Brettspiel aussuchen</span>
+            </div>
 
-    <div class="reward-level">
-        <strong>⭐ 30–34 Sterne</strong>
-        <span>🎳 Schwimmbad, Bowling oder eine Kleinigkeit bis 10 €</span>
-    </div>
+            <div class="reward-level">
+                <strong>⭐ 25–29 Sterne</strong>
+                <span>🍿 Kinoabend zu Hause oder Lieblingsessen</span>
+            </div>
 
-    <div class="reward-level special">
-        <strong>🌟 35 Sterne</strong>
-        <span>🧡 Wunsch-Unternehmung oder ein größeres Extra</span>
-    </div>
-</div>
+            <div class="reward-level">
+                <strong>⭐ 30–34 Sterne</strong>
+                <span>🏊 Schwimmbad, Bowling oder eine Kleinigkeit bis 5 €</span>
+            </div>
+
+            <div class="reward-level special">
+                <strong>🌟 35–40 Sterne</strong>
+                <span>🌈 Wunsch-Unternehmung oder ein großes Extra bis 10 €</span>
+            </div>
+        </div>
+
         <button id="restartButton">
             🌈 Neue Woche starten
         </button>
