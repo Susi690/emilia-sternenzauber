@@ -1,4 +1,4 @@
-let stars = 35;
+let stars = Number(localStorage.getItem("stars")) || 0;
 
 const startPage = document.getElementById("startPage");
 const taskPage = document.getElementById("taskPage");
@@ -60,4 +60,18 @@ if (stars >= 35) {
 }
 }
 
-updateStars(); 
+restartButton.addEventListener("click", function () {
+    stars = 0;
+    localStorage.setItem("stars", 0);
+
+    taskChecks.forEach((check, index) => {
+        check.checked = false;
+        check.parentElement.classList.remove("done");
+        localStorage.removeItem("task-" + index);
+    });
+
+    rewardPage.classList.remove("active");
+    startPage.classList.add("active");
+
+    updateStars();
+});
