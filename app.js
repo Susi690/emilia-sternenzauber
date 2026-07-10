@@ -102,11 +102,65 @@ function updateStars() {
     progressBarStart.style.width = percent + "%";
     progressBarTasks.style.width = percent + "%";
 
-    if (stars >= 35) {
-        startPage.classList.remove("active");
-        taskPage.classList.remove("active");
-        rewardPage.classList.add("active");
+if (stars >= 35) {
+    startPage.classList.remove("active");
+    taskPage.classList.remove("active");
+    rewardPage.classList.add("active");
+    startConfetti();
     }
 }
+function startConfetti() {
+    const canvas = document.getElementById("confettiCanvas");
+    const ctx = canvas.getContext("2d");
 
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const pieces = [];
+
+    for (let i = 0; i < 140; i++) {
+        pieces.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height - canvas.height,
+            size: Math.random() * 8 + 4,
+            speed: Math.random() * 3 + 2,
+            drift: Math.random() * 2 - 1,
+            rotation: Math.random() * 360
+        });
+    }
+
+    let frames = 0;
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        pieces.forEach(piece => {
+            piece.y += piece.speed;
+            piece.x += piece.drift;
+            piece.rotation += 4;
+
+            ctx.save();
+            ctx.translate(piece.x, piece.y);
+            ctx.rotate(piece.rotation * Math.PI / 180);
+            ctx.fillStyle = `hsl(${Math.random() * 360}, 90%, 65%)`;
+            ctx.fillRect(
+                -piece.size / 2,
+                -piece.size / 2,
+                piece.size,
+                piece.size
+            );
+            ctx.restore();
+        });
+
+        frames++;
+
+        if (frames < 240) {
+            requestAnimationFrame(draw);
+        } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    }
+
+    draw();
+}
 updateStars();
