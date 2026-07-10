@@ -388,10 +388,44 @@ font-size:24px;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: none;
+    max-width: 760px;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
+#rewardPage .rewardBox {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    .app {
+        width: 100%;
+        display: block;
+    }
+
+    #rewardPage.active {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 30px 16px 50px;
+        box-sizing: border-box;
+    }
+
+    #rewardPage .rewardBox {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
 #rewardPage .rewardBox {
     width: 100%;
     max-width: 680px;
