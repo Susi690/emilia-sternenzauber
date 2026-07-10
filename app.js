@@ -17,7 +17,7 @@ const progressBarTasks = document.getElementById("progressBarTasks");
 const taskChecks = document.querySelectorAll(".taskCheck");
 
 // Prüfen, ob ein neuer Tag begonnen hat
-const today = new Date().toDateString();
+const today = "TEST-MORGEN";
 const savedDay = localStorage.getItem("savedDay");
 
 if (savedDay !== today) {
