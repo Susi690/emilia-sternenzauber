@@ -290,3 +290,95 @@ font-size:24px;
         border-radius: 20px;
     }
 }
+/* Abschlussseite hübscher gestalten */
+#rewardPage {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+    text-align: center;
+}
+
+#rewardPage h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4fa3;
+}
+
+.rewardBox {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 28px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 30px rgba(255, 79, 163, 0.18);
+}
+
+.rewardBox h2 {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+}
+
+.rewardBox p {
+    line-height: 1.5;
+}
+
+.reward-levels {
+    display: grid;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.reward-level {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 16px;
+    border: 2px solid rgba(255, 79, 163, 0.22);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: left;
+}
+
+.reward-level strong {
+    color: #8d45c6;
+}
+
+.reward-level.special {
+    border-color: #ff4fa3;
+    background: rgba(255, 227, 242, 0.75);
+}
+
+#rewardMessage {
+    font-weight: 600;
+    color: #6a3f77;
+}
+
+#restartButton {
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    #rewardPage {
+        padding: 20px 14px 40px;
+    }
+
+    #rewardPage h1 {
+        font-size: 1.7rem;
+    }
+
+    .rewardBox {
+        padding: 20px 16px;
+        border-radius: 22px;
+    }
+
+    .rewardBox h2 {
+        font-size: 1.25rem;
+    }
+
+    .reward-level {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+}
