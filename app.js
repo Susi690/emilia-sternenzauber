@@ -1,4 +1,4 @@
-let stars = 35;
+let stars = Number(localStorage.getItem("stars")) || 0;
 
 const startPage = document.getElementById("startPage");
 const taskPage = document.getElementById("taskPage");
