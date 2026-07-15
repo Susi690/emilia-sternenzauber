@@ -511,3 +511,103 @@ font-size:24px;
         max-width: 430px !important;
     }
 }
+/* =========================================
+   WOCHENÜBERSICHT
+========================================= */
+
+.week-overview {
+    width: 100%;
+    margin: 24px 0 30px;
+    padding: 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(255, 79, 163, 0.15);
+    box-sizing: border-box;
+}
+
+.week-overview h2 {
+    margin: 0 0 8px;
+    color: #ff4fa3;
+    text-align: center;
+}
+
+.week-hint {
+    margin: 0 0 18px;
+    text-align: center;
+    color: #6a3f77;
+    line-height: 1.4;
+}
+
+.week-day {
+    display: grid;
+    grid-template-columns: minmax(110px, 1fr) 76px auto;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 79, 163, 0.18);
+}
+
+.week-day label {
+    font-weight: 700;
+    color: #6a3f77;
+}
+
+.day-stars-input {
+    width: 76px;
+    padding: 9px 8px;
+    border: 2px solid #ff8fc7;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    background: white;
+}
+
+.day-stars-input:focus {
+    outline: none;
+    border-color: #ff4fa3;
+    box-shadow: 0 0 0 3px rgba(255, 79, 163, 0.16);
+}
+
+.week-day span {
+    color: #7b5a87;
+    white-space: nowrap;
+}
+
+#saveWeekButton {
+    display: block;
+    margin: 18px auto 0;
+}
+
+.today-tasks-title {
+    margin: 24px 0 16px;
+    color: #ff4fa3;
+}
+
+/* Handy */
+@media (max-width: 600px) {
+    .week-overview {
+        padding: 16px 12px;
+        border-radius: 20px;
+    }
+
+    .week-day {
+        grid-template-columns: 1fr 68px;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .week-day span {
+        grid-column: 1 / -1;
+        font-size: 0.9rem;
+        margin-left: 2px;
+    }
+
+    .day-stars-input {
+        width: 68px;
+    }
+}
