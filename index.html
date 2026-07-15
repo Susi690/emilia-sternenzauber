@@ -32,25 +32,101 @@
 </section>
 
 <section id="taskPage" class="page">
-<h1>⭐ Heute</h1>
+    <h1>⭐ Heute</h1>
 
-<div class="stars-number">⭐ <span id="starsCountTasks">0</span> / 40 Sterne</div>
-<div class="progress"><div id="progressBarTasks"></div></div>
+    <div class="stars-number">
+        ⭐ <span id="starsCountTasks">0</span> / 40 Sterne
+    </div>
 
-<div class="tasks">
-<label class="task"><input type="checkbox" class="taskCheck"> 🎒 Schulsachen weggeräumt</label>
-<label class="task"><input type="checkbox" class="taskCheck"> 🧺 Mama geholfen</label>
-<label class="task"><input type="checkbox" class="taskCheck"> 🐶 Polly versorgt</label>
-<label class="task"><input type="checkbox" class="taskCheck"> 🌸 Gut miteinander umgegangen</label>
-<label class="task"><input type="checkbox" class="taskCheck"> 🌙 Abendroutine geschafft</label>
-<label class="task bonus"><input type="checkbox" class="taskCheck"> 💕 10 Minuten Kuschel-, Spiel- oder Quatschzeit</label>
-<label class="task"><input type="checkbox" class="taskCheck"> 🗣️ Mama muss nicht alles mehrfach wiederholen</label>
-<label class="task"><input type="checkbox" class="taskCheck"> 💗 Ich gehe gut mit meinen Freunden um und lüge sie nicht an</label>
-</div>
-    
-<button id="finishWeekButton">⭐ Woche abschließen</button>
-<button id="backButton">⬅ Zurück</button>
-    
+    <div class="progress">
+        <div id="progressBarTasks"></div>
+    </div>
+
+    <div class="week-overview">
+        <h2>📅 Deine Sternenwoche</h2>
+        <p class="week-hint">
+            Hier kannst du Sterne auch nachträglich eintragen oder korrigieren.
+        </p>
+
+        <div class="week-day">
+            <label for="stars-monday">Montag</label>
+            <input id="stars-monday" class="day-stars-input" type="number" min="0" max="8" value="0">
+            <span>von 8 ⭐</span>
+        </div>
+
+        <div class="week-day">
+            <label for="stars-tuesday">Dienstag</label>
+            <input id="stars-tuesday" class="day-stars-input" type="number" min="0" max="8" value="0">
+            <span>von 8 ⭐</span>
+        </div>
+
+        <div class="week-day">
+            <label for="stars-wednesday">Mittwoch</label>
+            <input id="stars-wednesday" class="day-stars-input" type="number" min="0" max="8" value="0">
+            <span>von 8 ⭐</span>
+        </div>
+
+        <div class="week-day">
+            <label for="stars-thursday">Donnerstag</label>
+            <input id="stars-thursday" class="day-stars-input" type="number" min="0" max="8" value="0">
+            <span>von 8 ⭐</span>
+        </div>
+
+        <div class="week-day">
+            <label for="stars-friday">Freitag</label>
+            <input id="stars-friday" class="day-stars-input" type="number" min="0" max="8" value="0">
+            <span>von 8 ⭐</span>
+        </div>
+
+        <button id="saveWeekButton">💾 Sterne speichern</button>
+    </div>
+
+    <h2 class="today-tasks-title">✨ Aufgaben für heute</h2>
+
+    <div class="tasks">
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            🎒 Schulsachen weggeräumt
+        </label>
+
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            🧺 Mama geholfen
+        </label>
+
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            🐶 Polly versorgt
+        </label>
+
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            🌸 Gut miteinander umgegangen
+        </label>
+
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            🌙 Abendroutine geschafft
+        </label>
+
+        <label class="task bonus">
+            <input type="checkbox" class="taskCheck">
+            💕 10 Minuten Kuschel-, Spiel- oder Quatschzeit
+        </label>
+
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            🗣️ Mama muss nicht alles mehrfach wiederholen
+        </label>
+
+        <label class="task">
+            <input type="checkbox" class="taskCheck">
+            💗 Ich gehe gut mit meinen Freunden um und lüge sie nicht an
+        </label>
+    </div>
+
+    <button id="finishWeekButton">⭐ Woche abschließen</button>
+    <button id="backButton">⬅️ Zurück</button>
 </section>
 
 <section id="rewardPage" class="page">
